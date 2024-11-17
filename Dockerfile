@@ -1,7 +1,7 @@
 ARG ALPINE_VERSION=3.20
 FROM alpine:${ALPINE_VERSION}
 WORKDIR /
-RUN apk add --no-cache curl tar&&\
+RUN apk add --no-cache curl tar lynx&&\
     cd / &&\
     wget https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-linux-aarch64.tgz -O ./speedtest.tgz &&\
     mkdir speedtest && \
